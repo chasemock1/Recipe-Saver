@@ -23,7 +23,6 @@ The **Recipe Saver** MVP is:
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |     Library      |                      Roles                            |
 | :--------------: |:-----------------------------------------------------:|
@@ -39,14 +38,12 @@ The **Recipe Saver** MVP is:
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
 [Wireframe](https://www.figma.com/file/9BtZOz6pCeWsBb9bxcpWTB/P4-project?node-id=0%3A1)
 
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+ 
 
 ``` structure
 
@@ -92,13 +89,10 @@ src
 
 #### Component Tree
 
-> Use this section to include a link to your component tree.
-
 [Component tree](https://whimsical.com/p4-componet-tree-SfJm126HL7jCuwLxhdFzie)
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                              | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------------------| :------: | :------------: | :-----------: | :---------: |
@@ -117,7 +111,8 @@ src
 
 #### ERD Model
 
-https://i.imgur.com/LdJinii.png
+![Desktop WireFrame](https://i.imgur.com/LdJinii.png)
+
 
 <br>
 
@@ -125,7 +120,10 @@ https://i.imgur.com/LdJinii.png
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Implement User
+- Add the ability to comment on other recipes
+- Add a search function
+- Add Category function
 
 ***
 
