@@ -1,25 +1,23 @@
 ## Overview
 
-_**Recipe Saver** is a web application that you can create and save your favorite recipes for easy access later. The application also will have a rotating recipe of the day, as well as having current "trending" recipes. 
+**Recipe Saver** is a web application that you can create and save your favorite recipes for easy access later. The application also will have a rotating recipe of the day, as well as having current "trending" recipes. 
 
 
 <br>
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
+The **Recipe Saver** MVP is:
+ - Create 3 tables
+ - Have association between 2 tables
+ - Full CRUD throughout the whole applicaition
+ - 2 media queries 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Get more familar with ruby on rails
+- Implement 1 Post-Mvp item
 
 <br>
 
@@ -27,13 +25,13 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 > Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|     Library      |                      Roles                            |
+| :--------------: |:-----------------------------------------------------:|
+|      React       | Used for the front end development                    |
+|   React Router   | Allows for multiple pages to be created and traversed |
+|   Ruby on rails  | Creates the backend api                               |
+|       Ruby       | Langauge to be used on rails                          |
+ 
 
 <br>
 
@@ -43,33 +41,8 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+[Wireframe](https://www.figma.com/file/9BtZOz6pCeWsBb9bxcpWTB/P4-project?node-id=0%3A1)
 
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
-
-#### Component Tree
-
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
 
 #### Component Hierarchy
 
@@ -78,14 +51,42 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+|__ screens/
+      |__ Create recipe
+            |__ CreateRecipe.jsx
+            |__ CreateRecipe.css
+      |__ HomePage
+            |__ Homepage.jsx
+            |__ Homepage.css
+      |__ Trending
+            |__ Trending.jsx
+            |__ Trending.css
+      |__ Detail
+            |__ Detail.jsx
+            |__ Detail.css
+      |__ Favorite      
+            |__ Favorite.jsx
+            |__ Favorite.css
+      |__ Profile Page
+            |__ ProfilePage.jsx
+            |__ ProfilePage.css
 |__ components/
-      |__ Header.jsx
+      |__ Recipe Of The Day
+            |__ RecipeOfTheDay.jsx
+            |__ RecipeOfTheDay.css
+      |__ Shared
+            |__ Nav
+                  |__ Nav.jsx
+                  |__ Nav.css
+            |__ Layout
+                  |__ Layout.jsx
+                  |__ Layout.css
+            |__ Footer
+                  |__ Footer.jsx
+                  |__ Footer.css
 |__ services/
+      |__ apiConfig.js
+      |__ Recipes.js
 
 ```
 
@@ -93,19 +94,22 @@ src
 
 > Use this section to include a link to your component tree.
 
-[Component tree](url)
+[Component tree](https://whimsical.com/p4-componet-tree-SfJm126HL7jCuwLxhdFzie)
 
 #### Time Estimates
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                              | Priority | Estimated Time | Time Invested | Actual Time |
+| ----------------------------------| :------: | :------------: | :-----------: | :---------: |
+| Create Backend table              |    H     |     4 hrs      |      TBD      |     TBD     |
+| Create backend CRUD Actions       |    H     |     6 hrs      |      TBD      |     TBD     |
+| Create each landing page          |    H     |     8 hrs      |      TBD      |     TBD     |
+| Create front end CRUD Actions     |    H     |     3 hrs      |      TBD      |     TBD     |
+| Add Css                           |    H     |     5 hrs      |      TBD      |     TBD     |
+| Post Mvp                          |    L     |     3 hrs      |      TBD      |     TBD     |
+| TOTAL                             |          |    29 hrs      |      TBD      |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -113,7 +117,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+https://i.imgur.com/LdJinii.png
 
 <br>
 
