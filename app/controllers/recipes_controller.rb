@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /recipes
   def index
@@ -16,7 +17,7 @@ class RecipesController < ApplicationController
   # POST /recipes
   def create
     @recipe = Recipe.new(recipe_params)
-
+    @recipe.user = @current_user
     if @recipe.save
       render json: @recipe, status: :created, location: @recipe
     else
