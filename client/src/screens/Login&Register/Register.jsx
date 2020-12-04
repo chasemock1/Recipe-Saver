@@ -15,10 +15,12 @@ export default function Register(props) {
         }))
     }
     return (
+        <div id= 'form-div'>
+            
         <form onSubmit={(e)=> {
             e.preventDefault()
             props.handleRegister(formData)
-            }}>
+        }} className = 'sign-create-form'>
             <h3>Register</h3>
             <label>Username:
             <input 
@@ -45,7 +47,8 @@ export default function Register(props) {
             onChange={handleChange}
             />
             </label>
-            <button>Submit</button>
+            <button id='submit-button' >Submit</button>
         </form>
+            </div>
     )
 }

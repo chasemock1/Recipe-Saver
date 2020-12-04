@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
-
+import './Login.css'
 export default function Login(props) {
     const [formData, setFormData] = useState({
         username: "",
@@ -15,10 +15,12 @@ export default function Login(props) {
         }))
     }
     return (
+        <div id="form-div">
+            
         <form onSubmit={(e)=> {
             e.preventDefault()
             props.handleLogin(formData)
-            }}>
+        }} className = "sign-create-form">
             <h3>Login</h3>
             <label>Username:
             <input 
@@ -38,7 +40,8 @@ export default function Login(props) {
             />
             </label>
             <Link to='/register'>Register</Link>
-            <button>Submit</button>
+            <button id= 'submit-button'>Submit</button>
         </form>
+            </div>
     )
 }

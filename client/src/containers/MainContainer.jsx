@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react'
 import {Switch, Route, useHistory} from 'react-router-dom'
 import RecipeCreate from '../screens/RecipeCreate'
-import Recipes from '../screens/Recipes'
-import RecipeDetail from '../screens/RecipeDetail'
+import Recipes from '../screens/Recipes/Recipes'
+import RecipeDetail from '../screens/RecipeDetail/RecipeDetail'
 import { createRecipe, destroyRecipe, getALLRecipes, putRecipe } from '../services/recipes'
 import RecipeEdit from '../screens/RecipeEdit'
 

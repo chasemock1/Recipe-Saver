@@ -3,9 +3,9 @@ import {useState, useEffect} from 'react'
 
 import './App.css';
 import Layout from './layouts/Layout';
-import Login from './screens/Login';
+import Login from './screens/Login&Register/Login';
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
-import Register from './screens/Register';
+import Register from './screens/Login&Register/Register';
 import MainContainer from './containers/MainContainer';
 
 function App() {

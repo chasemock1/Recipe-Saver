@@ -34,10 +34,12 @@ export default function RecipeEdit(props) {
         }))
     }
     return (
+        <div id = 'form-div'>
+            
         <form onSubmit={(e)=>{
             e.preventDefault()
-             props.handleUpdate(id, formData)
-        }}>
+            props.handleUpdate(id, formData)
+        }} className = 'sign-create-form'>
             <h3>Edit Recipe</h3>
             <label>Name:</label>
             <input
@@ -45,30 +47,31 @@ export default function RecipeEdit(props) {
                 name='name'
                 value={formData.name}
                 onChange={handleChange}
-            />
+                />
             <label>Description:</label>
             <input
                 type='text'
                 name='description'
                 value={formData.description}
                 onChange={handleChange}
-            />
+                />
             <label>Ingredients:</label>
             <input
                 type='text'
                 name='ingredients'
                 value={formData.ingredients}
                 onChange={handleChange}
-            />
+                />
             <label>Steps:</label>
             <input
                 type='text'
                 name='steps'
                 value={formData.steps}
                 onChange={handleChange}
-            />
+                />
             
-            <button>Submit</button>
+            <button id = 'submit-button'>Submit</button>
         </form>
+                </div>
     )
 }

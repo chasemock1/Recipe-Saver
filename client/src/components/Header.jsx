@@ -8,7 +8,7 @@ export default function Header(props) {
             <nav className="nav2">
         
                 
-            <Link to ='/' className = 'logo'><h1>RecipeSaver</h1></Link>
+            <Link to ='/' id = 'logo'><div>RecipeSaver</div></Link>
             <div className="links">
             {
                 currentUser ? 
