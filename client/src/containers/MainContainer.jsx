@@ -5,9 +5,15 @@ import Recipes from '../screens/Recipes/Recipes'
 import RecipeDetail from '../screens/RecipeDetail/RecipeDetail'
 import { createRecipe, destroyRecipe, getALLRecipes, putRecipe } from '../services/recipes'
 import RecipeEdit from '../screens/RecipeEdit'
+import { createFavorite } from '../services/favorites'
+import Favorites from '../screens/Favorites'
+import './MainContainer.css'
+import MainPage from '../components/MainPage'
+
 
 export default function MainContainer(props) {
 const [recipes, setRecipes] = useState([])
+const [favorites, setFavorites] = useState([])
 const history = useHistory()
 useEffect(()=>{
     const fetchRecipes = async () => {
@@ -34,11 +40,24 @@ useEffect(()=>{
     const handleDelete = async (id) =>{
         await destroyRecipe(id)
         setRecipes(prevState => prevState.filter(recipe => recipe.id !== id))
-        history.push('/recipes')
-        
+        history.push('/recipes')  
     }
+
+    const handleFavorite = async (favoriteData) =>{
+        const newFavorite = await createFavorite(favoriteData)
+        setFavorites(prevState => [...prevState, newFavorite])
+
+    }
+
     return (
-        <div>
+        <div className= 'main-container'>
+            <h1>Hello</h1>
+            
+        
+          
+            <MainPage recipes={recipes}/>
+
+          
            <Switch>
                 <Route path='/recipes/new'>
                    <RecipeCreate handleCreate={handleCreate}/>
@@ -51,6 +70,13 @@ useEffect(()=>{
                    recipes={recipes} 
                    handleDelete={handleDelete}
                    currentUser = {props.currentUser}
+                   handleFavorite = {handleFavorite}
+                   />
+               </Route>
+               <Route path = '/favorites'>
+                   <Favorites 
+                   favorites={favorites}
+                   recipes={recipes}
                    />
                </Route>
                <Route path='/recipes'>

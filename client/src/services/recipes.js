@@ -21,6 +21,6 @@ export const putRecipe = async (id, recipeData) => {
 }
 
 export const destroyRecipe = async (id) =>{
-    const resp = await api.get(`/recipes/${id}`)
+    const resp = await api.delete(`/recipes/${id}`)
     return resp 
 }

@@ -13,9 +13,9 @@ export default function Header(props) {
             {
                 currentUser ? 
                 <>
-                <p>Hello, {currentUser.username.toUpperCase()}</p>
+                <Link className='link'>Hello, {currentUser.username.toUpperCase()}</Link>
                     
-                <button onClick = {props.handleLogout} >Logout</button>
+                <Link className = 'link' onClick = {props.handleLogout} >Logout</Link>
                </> 
                 : <Link to='/login' className = 'link'>Login/Register</Link>
                 
@@ -26,7 +26,7 @@ export default function Header(props) {
                 <>
                 <Link to ='/recipes' className = 'link'>Recipes</Link>
                 <Link to ='/favorites' className = 'link'>Favorites</Link>
-                <Link to='/recipes/new' className = 'link'><button>Create</button></Link>
+                <Link to='/recipes/new' className = 'link'>Create</Link>
                 </>
             }
             </div> 

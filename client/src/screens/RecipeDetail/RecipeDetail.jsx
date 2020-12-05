@@ -6,6 +6,11 @@ import './RecipeDetail.css'
 export default function RecipeDetail(props) {
     const [recipeItem, setRecipeItem] = useState(null);
     const {id} = useParams()
+
+    const [favData, setFavData] = useState({
+        user_id: props.currentUser,
+        recipe_id: recipeItem?.id
+    })
     
     useEffect(() => {
         const fetchRecipeItem = async () => {
@@ -14,6 +19,14 @@ export default function RecipeDetail(props) {
         }
         fetchRecipeItem();
       }, [id])
+
+    const handleChange = (e) =>{
+        const{name,value} = e.target
+        setFavData(prevState =>({
+            ...prevState,
+            [name]:value
+        }))
+    }
 
     return (
         <div id = 'detail-page'>
@@ -32,7 +45,10 @@ export default function RecipeDetail(props) {
                 <Link to ={`/recipes/${recipeItem?.id}/edit`}className = 'edit-link'><button className = "edit-button">Edit</button></Link>
             </div>
             }
-            <button className = 'fav-button'>Favorite</button>
+           
+                
+            <button className = 'fav-button' onClick={()=> props.handleFavorite({user_id:props.currentUser?.id,recipe_id:recipeItem?.id} )}>Favorite</button>
+            
             </div>
 
 

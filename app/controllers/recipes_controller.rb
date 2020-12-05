@@ -47,7 +47,7 @@ class RecipesController < ApplicationController
     end
 
     def set_user_recipe
-      @recipe = @current_user.recipe.find()
+      @recipe = @current_user.recipes.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
