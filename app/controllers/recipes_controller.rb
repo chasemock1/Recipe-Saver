@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :update, :destroy]
   before_action :authorize_request, only: [:create, :update, :destroy]
-  before_action :set_user_food, only: [:update, :destroy]
+  before_action :set_user_recipe, only: [:update, :destroy]
 
   # GET /recipes
   def index
@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1
   def show
-    render json: @recipe
+    render json: @recipe, include: :favorites
   end
 
   # POST /recipes
@@ -46,8 +46,8 @@ class RecipesController < ApplicationController
       @recipe = Recipe.find(params[:id])
     end
 
-    def set_user_food
-      @food = @current_user.foods.find()
+    def set_user_recipe
+      @recipe = @current_user.recipe.find()
     end
 
     # Only allow a trusted parameter "white list" through.
