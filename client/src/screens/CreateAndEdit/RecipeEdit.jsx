@@ -49,21 +49,21 @@ export default function RecipeEdit(props) {
                 onChange={handleChange}
                 />
             <label>Description:</label>
-            <input
+            <textarea
                 type='text'
                 name='description'
                 value={formData.description}
                 onChange={handleChange}
                 />
             <label>Ingredients:</label>
-            <input
+            <textarea
                 type='text'
                 name='ingredients'
                 value={formData.ingredients}
                 onChange={handleChange}
                 />
             <label>Steps:</label>
-            <input
+            <textarea
                 type='text'
                 name='steps'
                 value={formData.steps}

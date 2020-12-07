@@ -1,3 +1,47 @@
 .recipes-title{
     margin-top: 100px;
+
 }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+
+.recipes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  margin-bottom: 80px;
+  margin-left: 89px;
+  width: 87%;
+  text-decoration: none;
+  
+}
+a:link{
+    text-decoration: none;
+    color: black
+}
+
+.recipes-info {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: -15px;
+  margin-left: -100px;
+  width: 30%;
+}
+
+.all-content {
+  margin-top: 50px;
+}
+
+.recipes-title {
+  margin-left: 117px;
+  margin-bottom: 35px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+
+
+
+

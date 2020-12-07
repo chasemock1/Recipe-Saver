@@ -1,5 +1,5 @@
 import {useState} from 'react'
-
+import './CreateAndEdit.css'
 export default function RecipeCreate(props) {
     const [formData, setFormData] = useState({
         name: '',
@@ -25,27 +25,30 @@ export default function RecipeCreate(props) {
             <h3>Create Recipe</h3>
             <label>Name:</label>
             <input
+        
                 type='text'
                 name='name'
                 value={formData.name}
                 onChange={handleChange}
                 />
             <label>Description:</label>
-            <input
+
+            <textarea
                 type='text'
                 name='description'
                 value={formData.description}
                 onChange={handleChange}
                 />
+                
             <label>Ingredients:</label>
-            <input
+            <textarea
                 type='text'
                 name='ingredients'
                 value={formData.ingredients}
                 onChange={handleChange}
                 />
             <label>Steps:</label>
-            <input
+            <textarea
                 type='text'
                 name='steps'
                 value={formData.steps}

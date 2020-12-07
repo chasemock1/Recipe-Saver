@@ -4,17 +4,19 @@ import './Recipes.css'
 
 export default function Recipes(props) {
     return (
-        <div>
-            <h3 className= 'recipes-title'>Recipes</h3>
+        <div className='all-content'>
+            <h1 className= 'recipes-title'>Recipes</h1>
+            <div className = 'recipes'>
             {
                 props.recipes.map(recipe =>(
                     <div>
                         <Link to={`/recipes/${recipe.id}`}>         
-                            <p key={recipe.id} className='recipes'>{recipe.name}</p>
+                            <a key={recipe.id} className='recipes-info'>{recipe.name}</a>
                         </Link>
                     </div>
                 ))
             }
+                </div>
 
            
         </div>

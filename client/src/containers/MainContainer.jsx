@@ -1,10 +1,10 @@
 import {useState, useEffect} from 'react'
 import {Switch, Route, useHistory} from 'react-router-dom'
-import RecipeCreate from '../screens/RecipeCreate'
+import RecipeCreate from '../screens/CreateAndEdit/RecipeCreate'
 import Recipes from '../screens/Recipes/Recipes'
 import RecipeDetail from '../screens/RecipeDetail/RecipeDetail'
 import { createRecipe, destroyRecipe, getALLRecipes, putRecipe } from '../services/recipes'
-import RecipeEdit from '../screens/RecipeEdit'
+import RecipeEdit from '../screens/CreateAndEdit/RecipeEdit'
 import { createFavorite } from '../services/favorites'
 import Favorites from '../screens/Favorites'
 import './MainContainer.css'
@@ -51,10 +51,6 @@ useEffect(()=>{
 
     return (
         <div className= 'main-container'>
-            <h1>Hello</h1>
-            
-        
-          
             <MainPage recipes={recipes}/>
 
           
