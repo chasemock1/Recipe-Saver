@@ -14,7 +14,7 @@ export default function RecipeDetail(props) {
     
     useEffect(() => {
         const fetchRecipeItem = async () => {
-          const recipeData = await getOneRecipe(id);
+          const recipeData = await getOneRecipe(Number(id));
           setRecipeItem(recipeData);
         }
         fetchRecipeItem();
