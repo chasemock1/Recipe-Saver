@@ -20,17 +20,11 @@ export default function RecipeDetail(props) {
         fetchRecipeItem();
       }, [id])
 
-    const handleChange = (e) =>{
-        const{name,value} = e.target
-        setFavData(prevState =>({
-            ...prevState,
-            [name]:value
-        }))
-    }
+    
 
     return (
         <div id = 'detail-page'>
-            
+        {    recipeItem && 
         <div className = 'detail-container'>
             <h3 className="detail-name"><b>Name:</b> {recipeItem?.name}</h3>
             <h3 className="detail-descrip"><b>Description:</b> {recipeItem?.description}</h3>
@@ -51,8 +45,8 @@ export default function RecipeDetail(props) {
             
             </div>
 
-
             </div>
+        }
         </div>
     )
 }

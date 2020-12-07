@@ -20,6 +20,10 @@ a:link{
     text-decoration: none;
     color: black
 }
+a:visted{
+    text-decoration: none;
+    color: black
+}
 
 .recipes-info {
   font-family: "Montserrat", sans-serif;
